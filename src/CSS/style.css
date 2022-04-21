@@ -140,5 +140,7 @@ footer p {
   color: var(--grey);
   align-self: center;
   position:absolute;
-  margin-bottom:0;
+  bottom:0;
+  width:100%;
+  text-align:center;
 }
