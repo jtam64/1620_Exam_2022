@@ -52,3 +52,24 @@ const contactsList = [
 ]
 
 // Your code goes here
+document.addEventListener("DOMContentLoaded", pageLoaded)
+
+function pageLoaded() {
+  renderIndex(contactsList)
+  mainview.addEventListener("click", onClick)
+
+  function renderIndex(contactsList) {
+    for(let i = 0; i < contactsList.length; i++) {
+        addItemToMain(contactsList[i]["name"])
+    }
+  };
+  
+  function addItemToMain(contactName) {
+    mainView = document.getElementById('display_all_contacts');
+    let imageName = `${contactName}.png`
+    let contactCard = `<div class="individual_contact"><img src=img/${imageName} class="display_all_contacts"><p>${contactName}</p></div>`;
+    mainView.insertAdjacentHTML('beforeend', contactCard);
+  };
+
+
+}

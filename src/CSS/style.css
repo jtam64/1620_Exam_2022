@@ -106,6 +106,7 @@ main {
   flex-grow: 0;
   gap: 20px;
   padding: 20px;
+  flex-flow:row;
 }
 
 #display_all_contacts div {
@@ -116,11 +117,15 @@ main {
   border-radius: 5px;
   padding: 10px;
   align-items: center;
+  width:fit-content;
+  height:100px;
+  cursor:pointer;
 }
 
 #display_all_contacts img {
   height: 50%;
   margin: 10px;
+  border-radius:50%;
 }
 
 #display_all_contacts p {
