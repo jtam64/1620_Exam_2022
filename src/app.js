@@ -56,7 +56,8 @@ document.addEventListener("DOMContentLoaded", pageLoaded)
 
 function pageLoaded() {
   renderIndex(contactsList)
-  mainview.addEventListener("click", onClick)
+  mainView = document.getElementById('display_all_contacts');
+  mainView.addEventListener("click", onClick)
 
   function renderIndex(contactsList) {
     for(let i = 0; i < contactsList.length; i++) {
@@ -71,5 +72,19 @@ function pageLoaded() {
     mainView.insertAdjacentHTML('beforeend', contactCard);
   };
 
-
+  function onClick() {
+    const singleContact = document.querySelector("#display_single_contact")
+    singleContact.forEach((item) => {
+      item.addEventListener('click', (e) => {
+        e.preventDefault;
+        var contact = {};
+        for (let i = 0; i < contactsList.length; i++) {
+          if (contactsList[i]["name"] == e.target.textContent) {
+            contact = contactsList[i]
+          }
+        }
+        return `<div id="individual_contact"><p>${contact["name"]}</p></div>`
+      })
+    })
+  }
 }

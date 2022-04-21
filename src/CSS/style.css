@@ -106,7 +106,7 @@ main {
   flex-grow: 0;
   gap: 20px;
   padding: 20px;
-  flex-flow:row;
+  flex-wrap:wrap;
 }
 
 #display_all_contacts div {
@@ -118,7 +118,7 @@ main {
   padding: 10px;
   align-items: center;
   width:fit-content;
-  height:100px;
+  height:200px;
   cursor:pointer;
 }
 
