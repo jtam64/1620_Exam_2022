@@ -73,7 +73,9 @@ function pageLoaded() {
   };
 
   function onClick() {
-    const singleContact = document.querySelector("#display_single_contact")
+    mainView.removeEventListener()
+    const singleContact = document.querySelectorAll("#display_all_contacts")
+    console.log(singleContact)
     singleContact.forEach((item) => {
       item.addEventListener('click', (e) => {
         e.preventDefault;
